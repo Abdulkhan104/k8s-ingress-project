@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: beautytoys-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: beautytoys
+  template:
+    metadata:
+      labels:
+        app: beautytoys
+    spec:
+      containers:
+      - name: beautytoys
+        image: 319197018462.dkr.ecr.us-west-2.amazonaws.com/beautytoys:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: beautytoys-service
+spec:
+  selector:
+    app: beautytoys
+  ports:
+  - port: 80
+    targetPort: 80
+  type: ClusterIP

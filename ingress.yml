@@ -3,6 +3,7 @@ kind: Ingress
 metadata:
   name: ecom-ingress
   annotations:
+    kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   rules:
@@ -22,11 +23,11 @@ spec:
             name: mobiles-service
             port:
               number: 80
-      - path: /tv(/|$)(.*)
+      - path: /tvs(/|$)(.*)
         pathType: Prefix
         backend:
           service:
-            name: tv-service
+            name: tvs-service
             port:
               number: 80
       - path: /electronics(/|$)(.*)
@@ -43,17 +44,17 @@ spec:
             name: fashion-service
             port:
               number: 80
-      - path: /home-furniture(/|$)(.*)
+      - path: /homefurniture(/|$)(.*)
         pathType: Prefix
         backend:
           service:
-            name: home-furniture-service
+            name: homefurniture-service
             port:
               number: 80
-      - path: /beauty(/|$)(.*)
+      - path: /beautytoys(/|$)(.*)
         pathType: Prefix
         backend:
           service:
-            name: beauty-service
+            name: beautytoys-service
             port:
               number: 80
