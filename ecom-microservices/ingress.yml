@@ -1,0 +1,59 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ecom-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: home-service
+            port:
+              number: 80
+      - path: /mobiles(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: mobiles-service
+            port:
+              number: 80
+      - path: /tv(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: tv-service
+            port:
+              number: 80
+      - path: /electronics(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: electronics-service
+            port:
+              number: 80
+      - path: /fashion(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: fashion-service
+            port:
+              number: 80
+      - path: /home-furniture(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: home-furniture-service
+            port:
+              number: 80
+      - path: /beauty(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: beauty-service
+            port:
+              number: 80

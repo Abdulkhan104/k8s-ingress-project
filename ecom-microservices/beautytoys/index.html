@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty & Toys</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/mobiles">Mobiles & Tablets</a></li>
+        <li><a href="/tv">TV & Appliances</a></li>
+        <li><a href="/electronics">Electronics</a></li>
+        <li><a href="/fashion">Fashion</a></li>
+        <li><a href="/home-furniture">Home & Furniture</a></li>
+        <li><a href="/beauty">Beauty & Toys</a></li>
+        <li><a href="#" id="cart-btn">Cart (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Beauty & Toys</h1>
+    <div class="products">
+      <div class="product">
+        <img src="https://placehold.co/200x200?text=Makeup+Kit" alt="Makeup Kit">
+        <h3>Makeup Kit</h3>
+        <p>$49</p>
+        <button onclick="addToCart({name: 'Makeup Kit', price: 49})">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://placehold.co/200x200?text=Perfume" alt="Perfume">
+        <h3>Luxury Perfume</h3>
+        <p>$89</p>
+        <button onclick="addToCart({name: 'Luxury Perfume', price: 89})">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://placehold.co/200x200?text=Toy+Car" alt="Toy Car">
+        <h3>Remote Toy Car</h3>
+        <p>$29</p>
+        <button onclick="addToCart({name: 'Remote Toy Car', price: 29})">Add to Cart</button>
+      </div>
+      <div class="product">
+        <img src="https://placehold.co/200x200?text=Doll" alt="Doll">
+        <h3>Action Doll</h3>
+        <p>$19</p>
+        <button onclick="addToCart({name: 'Action Doll', price: 19})">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+  <div id="cart-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

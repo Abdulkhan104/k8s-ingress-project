@@ -1,0 +1,6 @@
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
+.product { background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 10px; text-align: center; transition: transform 0.3s; }
+.product:hover { transform: scale(1.05); }
+.product img { width: 100%; height: auto; }
+.product button { background: #4CAF50; color: white; border: none; padding: 10px; cursor: pointer; transition: background 0.3s; }
+.product button:hover { background: #45a049; }
