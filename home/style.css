@@ -1,18 +1,54 @@
-body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
-header { background: #333; color: white; padding: 10px; }
-nav ul { display: flex; justify-content: space-around; list-style: none; padding: 0; }
-nav a { color: white; text-decoration: none; transition: color 0.3s; }
-nav a:hover { color: #ffd700; }
-main { padding: 20px; text-align: center; }
-h1 { color: #333; }
-.categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 20px; }
-.category-card { background: white; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
-.category-card:hover { transform: scale(1.05); box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
-.category-card img { width: 100%; height: auto; }
-.category-card h2 { padding: 10px; margin: 0; color: #333; }
-.modal { display: none; position: fixed; z-index: 1; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.4); animation: fadeIn 0.3s; }
-.modal-content { background: white; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 80%; max-width: 600px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
-.close { color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; transition: color 0.3s; }
-.close:hover { color: #000; }
-@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-@media (max-width: 768px) { nav ul { flex-direction: column; } .categories { grid-template-columns: 1fr; } }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+nav {
+  background-color: #333;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  color: #ddd;
+}
+
+.content {
+  padding: 2rem;
+  text-align: center;
+}
+
+.content h1 {
+  color: #333;
+}
+
+.cart-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.cart-btn:hover {
+  background-color: #218838;
+}
+
+#cart-count {
+  font-weight: bold;
+}

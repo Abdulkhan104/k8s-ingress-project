@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: homefurniture
-        image: 319197018462.dkr.ecr.us-west-2.amazonaws.com/homefurniture:latest
+        image: 058264536857.dkr.ecr.us-east-1.amazonaws.com/homefurniture:latest
         ports:
         - containerPort: 80
 ---

@@ -3,60 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fashion</title>
-  <link rel="stylesheet" href="style.css">
+  <title>E-Commerce - Fashion</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/mobiles">Mobiles & Tablets</a></li>
-        <li><a href="/tv">TV & Appliances</a></li>
-        <li><a href="/electronics">Electronics</a></li>
-        <li><a href="/fashion">Fashion</a></li>
-        <li><a href="/home-furniture">Home & Furniture</a></li>
-        <li><a href="/beauty">Beauty & Toys</a></li>
-        <li><a href="#" id="cart-btn">Cart (<span id="cart-count">0</span>)</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/mobiles">Mobiles & Tablets</a></li>
+      <li><a href="/tvs">TV & Appliances</a></li>
+      <li><a href="/electronics">Electronics</a></li>
+      <li><a href="/fashion">Fashion</a></li>
+      <li><a href="/homefurniture">Home & Furniture</a></li>
+      <li><a href="/beautytoys">Beauty & Toys</a></li>
+      <li><button class="cart-btn" onclick="showCart()">Cart (<span id="cart-count">0</span>)</button></li>
+    </ul>
+  </nav>
+
+  <div class="content">
     <h1>Fashion</h1>
-    <div class="products">
-      <div class="product">
-        <img src="https://placehold.co/200x200?text=Jeans" alt="Jeans">
-        <h3>Designer Jeans</h3>
-        <p>$59</p>
-        <button onclick="addToCart({name: 'Designer Jeans', price: 59})">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://placehold.co/200x200?text=Dress" alt="Dress">
-        <h3>Elegant Dress</h3>
-        <p>$89</p>
-        <button onclick="addToCart({name: 'Elegant Dress', price: 89})">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://placehold.co/200x200?text=Shoes" alt="Shoes">
-        <h3>Sports Shoes</h3>
-        <p>$79</p>
-        <button onclick="addToCart({name: 'Sports Shoes', price: 79})">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://placehold.co/200x200?text=Watch" alt="Watch">
-        <h3>Luxury Watch</h3>
-        <p>$199</p>
-        <button onclick="addToCart({name: 'Luxury Watch', price: 199})">Add to Cart</button>
-      </div>
-    </div>
-  </main>
-  <div id="cart-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Your Cart</h2>
-      <div id="cart-items"></div>
-    </div>
+    <p>Shop the trendiest fashion items.</p>
+    <button onclick="addToCart('Fashion Item')">Add to Cart</button>
   </div>
-  <script src="script.js"></script>
+
+  <script src="/script.js"></script>
 </body>
 </html>

@@ -3,60 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobiles & Tablets</title>
-  <link rel="stylesheet" href="style.css">
+  <title>E-Commerce - Mobiles & Tablets</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/mobiles">Mobiles & Tablets</a></li>
-        <li><a href="/tv">TV & Appliances</a></li>
-        <li><a href="/electronics">Electronics</a></li>
-        <li><a href="/fashion">Fashion</a></li>
-        <li><a href="/home-furniture">Home & Furniture</a></li>
-        <li><a href="/beauty">Beauty & Toys</a></li>
-        <li><a href="#" id="cart-btn">Cart (<span id="cart-count">0</span>)</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/mobiles">Mobiles & Tablets</a></li>
+      <li><a href="/tvs">TV & Appliances</a></li>
+      <li><a href="/electronics">Electronics</a></li>
+      <li><a href="/fashion">Fashion</a></li>
+      <li><a href="/homefurniture">Home & Furniture</a></li>
+      <li><a href="/beautytoys">Beauty & Toys</a></li>
+      <li><button class="cart-btn" onclick="showCart()">Cart (<span id="cart-count">0</span>)</button></li>
+    </ul>
+  </nav>
+
+  <div class="content">
     <h1>Mobiles & Tablets</h1>
-    <div class="products">
-      <div class="product">
-        <img src="https://placehold.co/200x200?text=Smartphone+1" alt="Smartphone 1">
-        <h3>Smartphone 1</h3>
-        <p>$499</p>
-        <button onclick="addToCart({name: 'Smartphone 1', price: 499})">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://placehold.co/200x200?text=Tablet+Pro" alt="Tablet Pro">
-        <h3>Tablet Pro</h3>
-        <p>$299</p>
-        <button onclick="addToCart({name: 'Tablet Pro', price: 299})">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://placehold.co/200x200?text=Budget+Phone" alt="Budget Phone">
-        <h3>Budget Phone</h3>
-        <p>$199</p>
-        <button onclick="addToCart({name: 'Budget Phone', price: 199})">Add to Cart</button>
-      </div>
-      <div class="product">
-        <img src="https://placehold.co/200x200?text=Flagship+Tablet" alt="Flagship Tablet">
-        <h3>Flagship Tablet</h3>
-        <p>$599</p>
-        <button onclick="addToCart({name: 'Flagship Tablet', price: 599})">Add to Cart</button>
-      </div>
-    </div>
-  </main>
-  <div id="cart-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Your Cart</h2>
-      <div id="cart-items"></div>
-    </div>
+    <p>Browse the latest mobile phones and tablets.</p>
+    <button onclick="addToCart('Mobile Device')">Add to Cart</button>
   </div>
-  <script src="script.js"></script>
+
+  <script src="/script.js"></script>
 </body>
 </html>
